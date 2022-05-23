@@ -2,7 +2,7 @@ export class KoffieService {
     MAX_KOFFIE_STERKTE = 10;
 
     getKoffieSoorten() {
-        return fetch('http://localhost:8083/restservices/koffie')
+        return fetch('http://localhost:8080/restservices/koffie')
             .then(r => {
                 if(r.status === 200){
                     return r.json();
