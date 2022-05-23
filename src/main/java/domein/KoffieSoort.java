@@ -6,6 +6,13 @@ public class KoffieSoort {
     private String barcode;
     private int sterkte;
 
+    public KoffieSoort(){
+        naam = "";
+        prijs = 0;
+        barcode = "";
+        sterkte = 0;
+    }
+
     public KoffieSoort(String naam, double prijs, String barcode, int sterkte) {
         this.naam = naam;
         this.prijs = prijs;
