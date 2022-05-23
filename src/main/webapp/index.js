@@ -12,3 +12,34 @@ koffieService.getKoffieSoorten().then(koffiesoorten => {
 })
 console.log('doe tie het ?')
 console.log(koffieService.MAX_KOFFIE_STERKTE)
+
+
+let furmpie = document.querySelector('#koffieform')
+let knuppie = document.querySelector('#opsturen')
+
+knuppie.addEventListener('click', e =>{
+    e.preventDefault();
+    let rauweData = new FormData(furmpie);
+
+    let data = {
+        naam: rauweData.get('naam'),
+        prijs: rauweData.get('prijs'), //beide manieren werken
+        sterkte: furmpie.sterkte.value,
+        barcode: furmpie.barcode.value,
+    }
+
+    fetch('http://localhost:8080/restservices/koffie', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+
+
+
+});
+
+
+
