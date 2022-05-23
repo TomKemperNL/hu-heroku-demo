@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE htm
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <title>Koffie</title>
 </head>
 <body>
-...
+    <ul id="koffielijst">
+        <li>koffie 1</li>
+        <li>koffie 2</li>
+    </ul>
+
+
+    <form name="koffieform">
+        <ul><label>Naam <input name="naam" type="text"/></label></ul>
+        <ul><label>Barcode <input name="barcode" type="text"/></label></ul>
+        <ul><label>Prijs <input name="prijs" type="text"/></label></ul>
+        <ul><label>Sterkte <input name="sterkte" type="number" min="0" max="10" /></label></ul>
+        <button id="opsturen">opsturen</button>
+    </form>
+
+
+    <script src="index.js" type="module"></script>
+
 </body>
 </html>

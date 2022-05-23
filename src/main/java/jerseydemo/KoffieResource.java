@@ -10,6 +10,8 @@ public class KoffieResource {
     @GET
     @Produces("application/json")
     public List<KoffieSoort> getAlleKoffie(){
+//        throw new RuntimeException("Dummyfout");
+
         return StartupListener.alleKoffie;
     }
 
@@ -49,7 +51,6 @@ public class KoffieResource {
 
 
     @DELETE
-
     @Path("{code}")
     public void verwijderKoffie(@PathParam("code") String barcode){
         for(KoffieSoort kf: StartupListener.alleKoffie){
