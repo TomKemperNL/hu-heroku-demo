@@ -13,4 +13,14 @@ export class KoffieService {
                 return Promise.resolve([])
             })
     }
+
+    voegKoffieToe(koffie){
+        return fetch('http://localhost:8080/restservices/koffie', {
+            method: 'POST',
+            body: JSON.stringify(koffie),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    }
 }

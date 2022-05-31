@@ -28,17 +28,7 @@ knuppie.addEventListener('click', e =>{
         barcode: furmpie.barcode.value,
     }
 
-    fetch('http://localhost:8080/restservices/koffie', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-
-
-
-
+    koffieService.voegKoffieToe(data);
 });
 
 
