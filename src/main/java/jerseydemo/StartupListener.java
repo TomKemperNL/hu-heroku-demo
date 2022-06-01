@@ -20,5 +20,7 @@ public class StartupListener implements ServletContextListener {
         alleKoffie.add(k1);
         alleKoffie.add(k2);
         alleKoffie.add(k3);
+
+
     }
 }
